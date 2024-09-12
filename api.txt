@@ -1,0 +1,40 @@
+// USER
+
+register  - localhost:5000/user/register
+login - localhost:5000/user/login
+userVarify- localhost:5000/user/varify
+Otp-send - localhost:5000/user/send
+Otp-Varify - localhost:5000/user/varifyOtp
+user-list - localhost:5000/user/list
+
+
+// create Group
+create-group - localhost:5000/group/save
+getAllGroup - localhost:5000/group/get
+deleteGroup  - localhost:5000/group/delete/{groupID}
+getPerticularGroup - localhost:5000/group/get/{groupID}
+updateGroup - localhost:5000/group/update/{groupID}
+
+// Expance
+saveExpance -  localhost:5000/addExpance/save/{groupID}   token is required
+payload -   {
+  "name": "nasta",
+  "splitMethod": "Seperate",      // if type "Equally" then don't give distribute key if Seperate then give the obj 
+  "amount": 100,
+  "perPersonAmount": 50,
+  "distribute": [
+    {
+      "Hrishi": 29
+    },
+    {
+      "Shreaysh": 20
+    }
+  ]
+}
+
+getExpance -  localhost:5000/get/{groupID}  
+deleteExpance- localhost:5000/delete/{expanceID}
+updateExpance - localhost:5000/update/{_id}    token is required  
+
+
+
